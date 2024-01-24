@@ -16,7 +16,50 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00
-	}
+	},
+	{
+		name: "steak",
+		vegetarian: false,
+		glutenFree: true,
+		price: 15.00
+	},
+	{
+		name: "potatoes",
+		vegetarian: true,
+		glutenFree: true,
+		price: 8.00
+	},
+	{
+		name: "cereal",
+		vegetarian: true,
+		glutenFree: false,
+		price: 6.50
+	},
+	{
+		name: "crab",
+		vegetarian: false,
+		glutenFree: true,
+		price: 13.00
+	},
+	{
+		name: "jam",
+		vegetarian: true,
+		glutenFree: true,
+		price: 4.99
+	},
+	{
+		name: "chicken strips",
+		vegetarian: false,
+		glutenFree: false,
+		price: 11.20
+	},
+	{
+		name: "grape juice",
+		vegetarian: true,
+		glutenFree: false,
+		price: 7.60
+	},
+		
 ];
 	
 
