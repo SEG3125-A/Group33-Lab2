@@ -70,7 +70,7 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	var hold;
-	for(let count=0;count<products.length-1;count+=1){
+	/*for(let count=0;count<products.length-1;count+=1){
 		for(let innerCount=count;innerCount<products.length;innerCount+=1){
 			if(products[innerCount].price < products[innerCount+1].price){
 				hold = products[innerCount];
@@ -80,9 +80,11 @@ function restrictListProducts(prods, restriction) {
 		
 		}
 	}
+ */
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
+			console.log(prods[i].price);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
 			product_names.push(prods[i].name);
