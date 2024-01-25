@@ -70,17 +70,17 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	var hold;
-	/*for(let count=0;count<products.length-1;count+=1){
-		for(let innerCount=count;innerCount<products.length;innerCount+=1){
-			if(products[innerCount].price < products[innerCount+1].price){
-				hold = products[innerCount];
-				products[innerCount] = products[innerCount+1];
-				products[innerCount+1] = hold;
+	for(let count=0;count<prods.length-1;count+=1){
+		for(let innerCount=count;innerCount<prods.length-1;innerCount+=1){
+			if(prods[innerCount].price < prods[innerCount+1].price){
+				hold = prods[innerCount];
+				prods[innerCount] = prods[innerCount+1];
+				prods[innerCount+1] = hold;
 			}
 		
 		}
 	}
- */
+ 
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
