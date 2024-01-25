@@ -70,8 +70,10 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	var hold;
-	for(let count=0;count<prods.length;count+=1){
-		for(let innerCount=count;innerCount<prods.length-1;innerCount+=1){
+
+	//Sort by price
+	for(let count=0;count<prods.length;count=count + 1){
+		for(let innerCount=count;innerCount<prods.length-1;innerCount=innerCount + 1){
 			if(prods[innerCount].price < prods[innerCount+1].price){
 				hold = prods[innerCount];
 				prods[innerCount] = prods[innerCount+1];
