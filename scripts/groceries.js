@@ -3,60 +3,70 @@ var products = [
 		name: "brocoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.99
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
+		organic: true,
 		price: 10.00
 	},
 	{
 		name: "steak",
 		vegetarian: false,
 		glutenFree: true,
+		organic: true,
 		price: 15.00
 	},
 	{
 		name: "potatoes",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 8.00
 	},
 	{
 		name: "cereal",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 6.50
 	},
 	{
 		name: "crab",
 		vegetarian: false,
 		glutenFree: true,
+		organic: true,
 		price: 13.00
 	},
 	{
 		name: "jam",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 4.99
 	},
 	{
 		name: "chicken strips",
 		vegetarian: false,
 		glutenFree: false,
+		organic: false,
 		price: 11.20
 	},
 	{
 		name: "grape juice",
 		vegetarian: true,
 		glutenFree: false,
+		organic: true,
 		price: 7.60
 	},
 		
@@ -67,7 +77,7 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods, restriction1, restriction2) {
 	let product_names = [];
 	var hold;
 
@@ -83,18 +93,21 @@ function restrictListProducts(prods, restriction) {
 		}
 	}
  
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name + ": " + prods[i].price);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name + ": " + prods[i].price);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name + ": " + prods[i].price);
-		}
-	}
-	return product_names;
+	for (let i = 0; i < prods.length; i += 1) {
+        if ( // will only "use" the condition it meets
+            ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true)) ||
+            ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) ||
+            (restriction1 == "None")){
+				if( // will only "use" the other condition it meets
+                ((restriction2 == "Organic") && (prods[i].organic == true)) ||
+                ((restriction2 == "NonOrganic") && (prods[i].organic == false)) ||
+                (restriction2 == "")
+            ){
+                product_names.push(prods[i].name);
+            }
+        }
+    }
+    return product_names;
 }
 
 // Calculate the total price of items, with received parameter being a list of products

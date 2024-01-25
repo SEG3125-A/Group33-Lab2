@@ -19,11 +19,18 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices('displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
     <option value="GlutenFree">GlutenFree</option>
     <option value="None">None</option>
+	</select>
+  <br>
+	Choose Preference (optional):
+	<select id="secondSelect" name="secondSelect" onchange="populateListProductChoices('displayProduct')">
+	  <option value=""></option>
+	  <option value="Organic">Organic</option>
+	  <option value="NonOrganic">Non-Organic</option>
 	</select>
 </div>
 
@@ -47,4 +54,8 @@
 <script src="scripts/main.js"></script>
 
 </body>
+
+<footer style="display: block;">
+	<p>Website designed by Group 33</p>
+</footer>
 </html>
