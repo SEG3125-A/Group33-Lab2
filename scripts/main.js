@@ -33,6 +33,18 @@ function populateListProductChoices(slct1, slct2) {
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
+
+	//Sort failsafe, since first sort in groceries.js doesn't work until a swap happens.
+	for(let count=0;count<products.length;count=count + 1){
+		for(let innerCount=count;innerCount<products.length-1;innerCount=innerCount + 1){
+			if(products[innerCount].price < products[innerCount+1].price){
+				hold = products[innerCount];
+				products[innerCount] = products[innerCount+1];
+				products[innerCount+1] = hold;
+			}
+		
+		}
+	}
     var optionArray = restrictListProducts(products, s1.value);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
