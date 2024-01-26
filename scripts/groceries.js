@@ -97,6 +97,7 @@ function restrictListProducts(prods, restriction1, restriction2) {
         if ( // will only "use" the condition it meets
             ((restriction1 == "Vegetarian") && (prods[i].vegetarian == true)) ||
             ((restriction1 == "GlutenFree") && (prods[i].glutenFree == true)) ||
+			((restriction1 == "VegetarianGlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)) ||
             (restriction1 == "None")){
 				if( // will only "use" the other condition it meets
                 ((restriction2 == "Organic") && (prods[i].organic == true)) ||
