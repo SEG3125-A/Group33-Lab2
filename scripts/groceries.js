@@ -1,69 +1,69 @@
 var products = [
 	{
-		name: "brocoli",
+		name: "Broccoli",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "Bread",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
 		price: 10.00
 	},
 	{
-		name: "steak",
+		name: "Steak",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
 		price: 15.00
 	},
 	{
-		name: "potatoes",
+		name: "Potatoes",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 8.00
 	},
 	{
-		name: "cereal",
+		name: "Cereal",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
 		price: 6.50
 	},
 	{
-		name: "crab",
+		name: "Crab",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
 		price: 13.00
 	},
 	{
-		name: "jam",
+		name: "Jam",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 4.99
 	},
 	{
-		name: "chicken strips",
+		name: "Chicken strips",
 		vegetarian: false,
 		glutenFree: false,
 		organic: false,
 		price: 11.20
 	},
 	{
-		name: "grape juice",
+		name: "Grape juice",
 		vegetarian: true,
 		glutenFree: false,
 		organic: true,
