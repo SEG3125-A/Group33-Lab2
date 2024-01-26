@@ -34,7 +34,6 @@ footer {
   overflow: hidden;
   display: flex;
   justify-content: left;
-  padding: 20px 20px 0px 20px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -46,7 +45,7 @@ footer {
   border-bottom: none;
   outline: none;
   cursor: pointer;
-  padding: 20px 120px ;
+  padding: 20px 0px;
   width: 100%;
   transition: 0.3s;
   font-family: FontAwesome;
@@ -69,7 +68,7 @@ footer {
 .tabcontent {
   display: none;
   padding: 20px;
-  width: 93.6%;
+  width: 100%;
   margin: 0 auto;
   font-family: FontAwesome;
 	font-style: normal;
