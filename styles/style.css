@@ -1,21 +1,56 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
+html, body, div, h1, h2, h3, p, footer {
+	margin: 0;
+  color: #333;
+}
+
+html, body {
+	background: #bdcbe5;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+h1 {
+	padding: 40px 0 20px;
+	font: 40px/60px Gabriela, Georgia, serif;
+	text-align: center;
+	text-shadow: 3px 3px rgba(0,0,0,0.1);
+	color: #fff;	
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-family: FontAwesome;
+	font-style: normal;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
+  background-color: #e4e4e4; 
+  border: 0.1px solid;
+  border-color: rgba(26, 26, 26, 0.1);
+  border-radius: 3px 3px 0px 0px;
+  border-bottom: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 20px 120px;
   transition: 0.3s;
+  font-family: FontAwesome;
+	font-style: normal;
+	font-size: 17px;
+  color: #333;
 }
 
 /* Change background color of buttons on hover */
@@ -25,13 +60,21 @@
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #f8f8f8;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: FontAwesome;
+	font-style: normal;
+	font-size: 15px;
+  width: 813px;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 0px 0px 3px 3px;
+  border-color: rgba(0,0,0,0.1);
   border-top: none;
+  background-color: #f8f8f8;
 }
